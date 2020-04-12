@@ -1,0 +1,58 @@
+{
+  "manifestVersion": 1,
+  "id": "unindented-azure-pipelines-tasks",
+  "name": "Azure Pipelines Tasks",
+  "description": "Some random VSTS/ADO tasks for my own use.",
+  "version": "0.0.0-development",
+  "public": true,
+  "publisher": "unindented",
+  "repository": {
+    "type": "git",
+    "uri": "https://github.com/unindented/azure-pipelines-tasks"
+  },
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "categories": ["Azure Pipelines"],
+  "tags": ["build"],
+  "content": {
+    "details": {
+      "path": "README.md"
+    },
+    "license": {
+      "path": "LICENSE"
+    }
+  },
+  "links": {
+    "home": {
+      "uri": "https://github.com/unindented/azure-pipelines-tasks"
+    },
+    "repository": {
+      "uri": "https://github.com/unindented/azure-pipelines-tasks"
+    },
+    "issues": {
+      "uri": "https://github.com/unindented/azure-pipelines-tasks/issues"
+    }
+  },
+  "icons": {
+    "default": "icon.png"
+  },
+  "files": [
+    {
+      "path": "dist"
+    }
+  ],
+  "contributions": [
+    {
+      "id": "post-toobig-results",
+      "type": "ms.vss-distributed-task.task",
+      "description": "Post toobig results as a comment in a PR.",
+      "targets": ["ms.vss-distributed-task.tasks"],
+      "properties": {
+        "name": "dist/PostToobigResults"
+      }
+    }
+  ]
+}

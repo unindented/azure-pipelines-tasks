@@ -1,0 +1,87 @@
+{
+  "id": "edabbd6b-14a9-4fde-a076-76908d97eab9",
+  "name": "PostToobigResults",
+  "friendlyName": "Post Toobig Results",
+  "description": "Post toobig results as a comment in a PR.",
+  "author": "Microsoft Corporation",
+  "helpUrl": "https://github.com/unindented/azure-pipelines-tasks/tree/master/src/PostToobigResults",
+  "helpMarkDown": "[Learn more about this task](https://github.com/unindented/azure-pipelines-tasks/tree/master/src/PostToobigResults)",
+  "version": {
+    "Major": 0,
+    "Minor": 0,
+    "Patch": 0
+  },
+  "minimumAgentVersion": "2.144.0",
+  "demands": ["npm"],
+  "category": "Build",
+  "visibility": ["Build"],
+  "groups": [],
+  "instanceNameFormat": "Post Toobig Results $(resultsFilePath)",
+  "inputs": [
+    {
+      "name": "resultsFileType",
+      "type": "radio",
+      "label": "Results file type",
+      "required": false,
+      "defaultValue": "filePath",
+      "helpMarkDown": "Results file type: File Path or URL",
+      "options": {
+        "filePath": "File Path",
+        "url": "URL"
+      }
+    },
+    {
+      "name": "resultsFilePath",
+      "type": "filePath",
+      "label": "Results file",
+      "visibleRule": "resultsFileType = filePath",
+      "defaultValue": "toobigResults.json",
+      "required": true,
+      "helpMarkDown": "Enter the path to a JSON file containing `toobig` results for this run."
+    },
+    {
+      "name": "resultsFileUrl",
+      "type": "string",
+      "label": "Results file",
+      "visibleRule": "resultsFileType = url",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "Enter the URL to a JSON file containing `toobig` results for this run."
+    },
+    {
+      "name": "baselinesFileType",
+      "type": "radio",
+      "label": "Baseline results file type",
+      "required": false,
+      "defaultValue": "filePath",
+      "helpMarkDown": "Baseline results file type: File Path or URL",
+      "options": {
+        "filePath": "File Path",
+        "url": "URL"
+      }
+    },
+    {
+      "name": "baselinesFilePath",
+      "type": "filePath",
+      "label": "Baseline results file",
+      "visibleRule": "baselinesFileType = filePath",
+      "defaultValue": "",
+      "required": false,
+      "helpMarkDown": "Enter the path to a JSON file containing `toobig` results for a previous run, to be used as baselines."
+    },
+    {
+      "name": "baselinesFileUrl",
+      "type": "string",
+      "label": "Baseline results file",
+      "visibleRule": "baselinesFileType = url",
+      "defaultValue": "",
+      "required": false,
+      "helpMarkDown": "Enter the URL to a JSON file containing `toobig` results for a previous run, to be used as baselines."
+    }
+  ],
+  "execution": {
+    "Node10": {
+      "target": "index.js"
+    }
+  }
+}

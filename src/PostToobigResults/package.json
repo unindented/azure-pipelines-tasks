@@ -1,0 +1,11 @@
+{
+  "name": "post-toobig-results",
+  "description": "Post toobig results as a comment in a PR.",
+  "version": "0.0.0-development",
+  "private": true,
+  "dependencies": {
+    "azure-devops-node-api": "^10.1.1",
+    "azure-pipelines-task-lib": "^2.9.3",
+    "toobig": "^3.3.1"
+  }
+}

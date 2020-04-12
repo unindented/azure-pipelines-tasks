@@ -1,0 +1,12 @@
+.jest/
+coverage/
+dist/
+node_modules/
+.DS_Store
+*.log
+*.vsix
+*~
+~$*
+.env
+.taskkey
+!.keep
