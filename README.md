@@ -1,6 +1,6 @@
 # Azure Pipelines Tasks
 
-Some random VSTS/ADO tasks for my own use:
+Some random VSTS/ADO tasks for my own perusal:
 
 - [`PostToobigResults`](./src/PostToobigResults): Task to post [`toobig`](https://github.com/unindented/toobig) results as a comment in a PR.
 
