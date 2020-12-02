@@ -12,13 +12,9 @@
     "Patch": 0
   },
   "minimumAgentVersion": "2.144.0",
-  "demands": [
-    "npm"
-  ],
+  "demands": ["npm"],
   "category": "Build",
-  "visibility": [
-    "Build"
-  ],
+  "visibility": ["Build"],
   "groups": [],
   "instanceNameFormat": "Post Toobig Results $(resultsFilePath)",
   "inputs": [

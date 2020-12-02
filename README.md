@@ -3,6 +3,7 @@
 Some random VSTS/ADO tasks for my own perusal:
 
 - [`PostToobigResults`](./src/PostToobigResults): Task to post [`toobig`](https://github.com/unindented/toobig) results as a comment in a PR.
+- [`DeleteComments`](./src/DeleteComments): Task to delete comments from a certain author in a PR.
 
 Learn more about building custom ADO tasks in this [tutorial](https://docs.microsoft.com/en-us/azure/devops/extend/develop/add-build-task).
 

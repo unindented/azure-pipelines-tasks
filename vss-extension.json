@@ -15,12 +15,8 @@
       "id": "Microsoft.VisualStudio.Services"
     }
   ],
-  "categories": [
-    "Azure Pipelines"
-  ],
-  "tags": [
-    "build"
-  ],
+  "categories": ["Azure Pipelines"],
+  "tags": ["build"],
   "content": {
     "details": {
       "path": "README.md"
@@ -53,9 +49,7 @@
       "id": "post-toobig-results",
       "type": "ms.vss-distributed-task.task",
       "description": "Post toobig results as a comment in a PR.",
-      "targets": [
-        "ms.vss-distributed-task.tasks"
-      ],
+      "targets": ["ms.vss-distributed-task.tasks"],
       "properties": {
         "name": "dist/PostToobigResults"
       }
