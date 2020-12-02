@@ -39,6 +39,7 @@ export const getFilePathInput = (
   const isFile = value && check ? stats(value).isFile() : false;
 
   if (required && check && !isFile) {
+    // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
     throw new Error(`Input is not a file: ${value}`);
   }
 

@@ -7,7 +7,7 @@ module.exports = {
       jsx: true,
     },
     tsconfigRootDir: __dirname,
-    project: ["./tsconfig.json"],
+    project: ["./tsconfig.eslint.json"],
   },
   env: {
     node: true,
@@ -30,11 +30,35 @@ module.exports = {
     "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
     "@typescript-eslint/explicit-member-accessibility": ["error"],
     "@typescript-eslint/explicit-module-boundary-types": ["error"],
-    "@typescript-eslint/interface-name-prefix": ["error", "never"],
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        selector: ["default", "variableLike"],
+        format: ["camelCase"],
+        leadingUnderscore: "allow",
+      },
+      {
+        selector: ["memberLike"],
+        format: ["camelCase", "PascalCase"],
+      },
+      {
+        selector: ["enumMember", "typeLike"],
+        format: ["PascalCase"],
+      },
+      {
+        selector: ["interface", "typeAlias"],
+        format: ["PascalCase"],
+        custom: {
+          regex: "^I[A-Z]",
+          match: false,
+        },
+      },
+    ],
     "@typescript-eslint/no-empty-function": "off",
     "@typescript-eslint/no-floating-promises": ["error"],
     "@typescript-eslint/no-implied-eval": ["error"],
     "@typescript-eslint/no-parameter-properties": ["error"],
+    "@typescript-eslint/no-shadow": ["error"],
     "@typescript-eslint/no-throw-literal": ["error"],
     "@typescript-eslint/no-unnecessary-boolean-literal-compare": ["error"],
     "@typescript-eslint/no-unnecessary-condition": ["error"],
@@ -44,7 +68,10 @@ module.exports = {
     "@typescript-eslint/no-unused-expressions": ["error"],
     "@typescript-eslint/no-unused-vars": [
       "error",
-      { argsIgnorePattern: "^_", ignoreRestSiblings: true },
+      {
+        argsIgnorePattern: "^_",
+        ignoreRestSiblings: true,
+      },
     ],
     "@typescript-eslint/no-use-before-define": "off",
     "@typescript-eslint/no-var-requires": "off",
@@ -54,7 +81,9 @@ module.exports = {
     "@typescript-eslint/restrict-plus-operands": ["error"],
     "@typescript-eslint/restrict-template-expressions": [
       "error",
-      { allowNullable: true },
+      {
+        allowNullable: true,
+      },
     ],
     "@typescript-eslint/return-await": ["error"],
     "@typescript-eslint/switch-exhaustiveness-check": ["error"],
@@ -66,13 +95,16 @@ module.exports = {
     curly: ["error"],
     "default-case": ["error"],
     "dot-notation": ["error"],
-    eqeqeq: ["error", "always", { null: "ignore" }],
+    eqeqeq: [
+      "error",
+      "always",
+      {
+        null: "ignore",
+      },
+    ],
     "guard-for-in": ["error"],
     "handle-callback-err": ["error"],
     "import/default": "off",
-    "no-buffer-constructor": ["error"],
-    "no-new-require": ["error"],
-    "no-path-concat": ["error"],
     "import/order": [
       "error",
       {
@@ -81,6 +113,7 @@ module.exports = {
       },
     ],
     "max-classes-per-file": ["error", 1],
+    "no-buffer-constructor": ["error"],
     "no-caller": ["error"],
     "no-constructor-return": ["error"],
     "no-div-regex": ["error"],
@@ -102,9 +135,11 @@ module.exports = {
     "no-multi-spaces": ["error"],
     "no-multi-str": ["error"],
     "no-new-func": ["error"],
+    "no-new-require": ["error"],
     "no-new-wrappers": ["error"],
     "no-new": ["error"],
     "no-param-reassign": ["error"],
+    "no-path-concat": ["error"],
     "no-proto": ["error"],
     "no-restricted-globals": ["error"],
     "no-restricted-properties": ["error"],
@@ -112,7 +147,7 @@ module.exports = {
     "no-return-await": ["error"],
     "no-self-compare": ["error"],
     "no-sequences": ["error"],
-    "no-shadow": ["error"],
+    "no-shadow": "off",
     "no-template-curly-in-string": ["error"],
     "no-throw-literal": ["error"],
     "no-undef-init": ["error"],
@@ -125,11 +160,16 @@ module.exports = {
     "prefer-promise-reject-errors": ["error"],
     "prefer-regex-literals": ["error"],
     radix: ["error"],
+    "require-atomic-updates": ["error"],
     "require-unicode-regexp": ["error"],
+    "sort-imports": [
+      "error",
+      {
+        ignoreDeclarationSort: true,
+      },
+    ],
     "wrap-iife": ["error"],
     yoda: ["error"],
-    "require-atomic-updates": ["error"],
-    "sort-imports": ["error", { ignoreDeclarationSort: true }],
   },
   overrides: [
     {

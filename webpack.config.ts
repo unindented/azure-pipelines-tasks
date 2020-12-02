@@ -43,11 +43,13 @@ const config: Configuration = {
   },
 
   plugins: [
-    new CopyPlugin([
-      { context: "src", from: "*/node_modules/**", toType: "dir" },
-      { context: "src", from: "*/icon.png" },
-      { context: "src", from: "*/task.json" },
-    ]),
+    new CopyPlugin({
+      patterns: [
+        { context: "src", from: "*/node_modules/**", toType: "dir" },
+        { context: "src", from: "*/icon.png" },
+        { context: "src", from: "*/task.json" },
+      ],
+    }),
   ],
 };
 

@@ -4,7 +4,7 @@
   "version": "0.0.0-development",
   "private": true,
   "dependencies": {
-    "azure-devops-node-api": "^10.1.1",
-    "azure-pipelines-task-lib": "^2.9.3"
+    "azure-devops-node-api": "^10.1.2",
+    "azure-pipelines-task-lib": "^2.11.3"
   }
 }
