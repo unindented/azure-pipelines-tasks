@@ -1,3 +1,10 @@
+## [1.1.0](https://github.com/unindented/azure-pipelines-tasks/compare/v1.0.1...v1.1.0) (2020-12-02)
+
+
+### Features
+
+* add task `DeleteComments` ([494f7c3](https://github.com/unindented/azure-pipelines-tasks/commit/494f7c3b1b53b151d4975654036f7f510f754381))
+
 ### [1.0.1](https://github.com/unindented/azure-pipelines-tasks/compare/v1.0.0...v1.0.1) (2020-04-12)
 
 
