@@ -59,6 +59,15 @@
       "properties": {
         "name": "dist/PostToobigResults"
       }
+    },
+    {
+      "id": "delete-comments",
+      "type": "ms.vss-distributed-task.task",
+      "description": "Delete comments from a certain author in a PR.",
+      "targets": ["ms.vss-distributed-task.tasks"],
+      "properties": {
+        "name": "dist/DeleteComments"
+      }
     }
   ]
 }

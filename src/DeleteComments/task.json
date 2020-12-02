@@ -1,0 +1,43 @@
+{
+  "id": "e728c0bd-f176-42b6-9085-f07db4801954",
+  "name": "DeleteComments",
+  "friendlyName": "Delete Comments",
+  "description": "Delete comments from a certain author in a PR.",
+  "author": "Microsoft Corporation",
+  "helpUrl": "https://github.com/unindented/azure-pipelines-tasks/tree/master/src/DeleteComments",
+  "helpMarkDown": "[Learn more about this task](https://github.com/unindented/azure-pipelines-tasks/tree/master/src/DeleteComments)",
+  "version": {
+    "Major": 0,
+    "Minor": 0,
+    "Patch": 0
+  },
+  "minimumAgentVersion": "2.144.0",
+  "demands": ["npm"],
+  "category": "Build",
+  "visibility": ["Build"],
+  "groups": [],
+  "instanceNameFormat": "Delete Comments",
+  "inputs": [
+    {
+      "name": "author",
+      "type": "string",
+      "label": "Author",
+      "required": true,
+      "defaultValue": "",
+      "helpMarkDown": "Comments from this author will get deleted."
+    },
+    {
+      "name": "olderThan",
+      "type": "string",
+      "label": "Older than",
+      "required": false,
+      "defaultValue": "",
+      "helpMarkDown": "Only comments older than this number of seconds will get deleted."
+    }
+  ],
+  "execution": {
+    "Node10": {
+      "target": "index.js"
+    }
+  }
+}

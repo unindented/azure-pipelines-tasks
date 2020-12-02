@@ -6,6 +6,7 @@ import { Configuration } from "webpack";
 const config: Configuration = {
   entry: {
     "PostToobigResults/index": "./src/PostToobigResults/index.ts",
+    "DeleteComments/index": "./src/DeleteComments/index.ts",
   },
 
   output: {
