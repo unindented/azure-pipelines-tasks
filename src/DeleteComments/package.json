@@ -5,6 +5,6 @@
   "private": true,
   "dependencies": {
     "azure-devops-node-api": "^10.1.2",
-    "azure-pipelines-task-lib": "^2.11.3"
+    "azure-pipelines-task-lib": "^4.0.1-preview"
   }
 }
